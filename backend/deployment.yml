@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: back-195220
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels: 
+        app: back-195220
+    spec:                   
+      containers: 
+      - name: back-195220 
+        image: gcr.io/back-195220/lambda-backend-devops:v1 
+        ports:
+        - containerPort: 8080
